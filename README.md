@@ -1,0 +1,1 @@
+Switcher for macOS
