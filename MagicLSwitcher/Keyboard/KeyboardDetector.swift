@@ -10,17 +10,12 @@ private func callback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent,
     let detector = Unmanaged<KeyboardDetector>
             .fromOpaque(userInfo)
             .takeUnretainedValue()
+    if detector.isReplacingText {
+        return Unmanaged.passUnretained(event)
+    }
     let keyCode = Int(event.getIntegerValueField(.keyboardEventKeycode))
     switch keyCode {
     case kVK_Space:
-        let text = detector.buffer.text
-        if detector.layoutSwitcher.shouldSwitchToRussian(from: text) {
-            let corrected = detector.layoutSwitcher.correctedRussianWord(from: text)
-            detector.deleteLastWord(length: text.count)
-            detector.insertText(corrected)
-            print("corrected:", corrected)
-            detector.inputSourceManager.switchToInputSource(with: "com.apple.keylayout.RussianWin")
-        }
         detector.buffer.clear()
         
     case kVK_Return: detector.buffer.clear()
@@ -36,11 +31,29 @@ private func callback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent,
         if length > 0 {
             let char = Character(UnicodeScalar(buffer[0])!)
             detector.buffer.add(char)
-            // TODO: enable auto layout switching after improving logic
-                // let text = detector.buffer.text
-           // if detector.layoutSwitcher.shouldSwitchToRussian(from: text) {
-              //  detector.inputSourceManager.switchToInputSource(with: "com.apple.keylayout.RussianWin")
-           // }
+            let text = detector.buffer.text
+            if text.count >= 3 {
+                if detector.layoutSwitcher.shouldSwitchToRussian(from: text) {
+                    let corrected = detector.layoutSwitcher.correctedRussianWord(from: text)
+                    detector.isReplacingText = true
+                    detector.textReplacementService.deleteLastWord(length: text.count)
+                    detector.textReplacementService.insertText(corrected)
+                    detector.inputSourceManager.switchToInputSource(with: "com.apple.keylayout.RussianWin")
+                    detector.isReplacingText = false
+                    
+                    detector.buffer.clear()
+                } else if detector.layoutSwitcher.shouldSwitchToEnglish(from: text) {
+                    let corrected = detector.layoutSwitcher.convertToEnglish(text)
+                    
+                    detector.isReplacingText = true
+                    detector.textReplacementService.deleteLastWord(length: text.count)
+                    detector.textReplacementService.insertText(corrected)
+                    detector.inputSourceManager.switchToInputSource(with: "com.apple.keylayout.ABC")
+                    detector.isReplacingText = false
+                    
+                    detector.buffer.clear()
+                }
+            }
         }
     }
         return Unmanaged.passUnretained(event)
@@ -52,6 +65,9 @@ final class KeyboardDetector {
     var buffer = TextBuffer()
     let inputSourceManager = InputSourceManager()
     let layoutSwitcher = LayoutSwitcher()
+    let textReplacementService = TextReplacementService()
+        // TODO: will be used for text replacement logic
+    var isReplacingText = false
     
     func start() {
         let eventsOfInterest = CGEventMask(1 << CGEventType.keyDown.rawValue)

@@ -1,19 +1,32 @@
-//
-//  ContentView.swift
-//  MagicLSwitcher
-//
-//  Created by Khachatur Abramian on 24.3.2026.
-//
-
 import SwiftUI
+import AppKit
 
+private let detector = KeyboardDetector()
 struct ContentView: View {
+    @State private var isEnabled: Bool = false
     var body: some View {
+
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if isEnabled {
+                Text("Access granted")
+                Button("Open settings") {
+                    let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")
+                    if let url = url {
+                        NSWorkspace.shared.open(url)
+                    }
+                }
+            } else {
+                Text("Access required")
+                Button("Enable") {
+                    _ = AccessibilityPermission.request()
+                    isEnabled = AccessibilityPermission.isEnabled()
+                    if isEnabled {
+                        detector.start()
+                    }
+                
+                }
+            }
+               
         }
         .padding()
     }
