@@ -24,14 +24,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		754C0E9E2F94348800DECA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text; path = Info.plist; sourceTree = "<group>"; };
+		754C0FC82F94E36400DECA40 /* MagicLSwitcherIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicLSwitcherIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C52B352F729A6D00A7E8AF /* MagicLSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicLSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C52B422F729A6E00A7E8AF /* MagicLSwitcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicLSwitcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C52B4C2F729A6E00A7E8AF /* MagicLSwitcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicLSwitcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		751D2C992F950A340073913C /* Exceptions for "MagicLSwitcher" folder in "MagicLSwitcherIM" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				InputMethod/CompositionBuffer.swift,
+				InputMethod/IMKServerManager.swift,
+				InputMethod/InputMethodDecisionEngine.swift,
+				InputMethod/KeyboardTranslator.swift,
+				InputMethod/SwitcherInputController.swift,
+			);
+			target = 754C0FC72F94E36400DECA40 /* MagicLSwitcherIM */;
+		};
+		7588F0E42F96A72100D08502 /* Exceptions for "MagicLSwitcherIM" folder in "MagicLSwitcherIM" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				InfoIM.plist,
+			);
+			target = 754C0FC72F94E36400DECA40 /* MagicLSwitcherIM */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		754C0FC92F94E36400DECA40 /* MagicLSwitcherIM */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7588F0E42F96A72100D08502 /* Exceptions for "MagicLSwitcherIM" folder in "MagicLSwitcherIM" target */,
+			);
+			path = MagicLSwitcherIM;
+			sourceTree = "<group>";
+		};
 		75C52B372F729A6D00A7E8AF /* MagicLSwitcher */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				751D2C992F950A340073913C /* Exceptions for "MagicLSwitcher" folder in "MagicLSwitcherIM" target */,
+			);
 			path = MagicLSwitcher;
 			sourceTree = "<group>";
 		};
@@ -48,6 +82,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		754C0FC52F94E36400DECA40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75C52B322F729A6D00A7E8AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,9 +116,11 @@
 		75C52B2C2F729A6D00A7E8AF = {
 			isa = PBXGroup;
 			children = (
+				754C0E9E2F94348800DECA40 /* Info.plist */,
 				75C52B372F729A6D00A7E8AF /* MagicLSwitcher */,
 				75C52B452F729A6E00A7E8AF /* MagicLSwitcherTests */,
 				75C52B4F2F729A6E00A7E8AF /* MagicLSwitcherUITests */,
+				754C0FC92F94E36400DECA40 /* MagicLSwitcherIM */,
 				75C52B362F729A6D00A7E8AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +131,7 @@
 				75C52B352F729A6D00A7E8AF /* MagicLSwitcher.app */,
 				75C52B422F729A6E00A7E8AF /* MagicLSwitcherTests.xctest */,
 				75C52B4C2F729A6E00A7E8AF /* MagicLSwitcherUITests.xctest */,
+				754C0FC82F94E36400DECA40 /* MagicLSwitcherIM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +139,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		754C0FC72F94E36400DECA40 /* MagicLSwitcherIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 754C0FEF2F94E36600DECA40 /* Build configuration list for PBXNativeTarget "MagicLSwitcherIM" */;
+			buildPhases = (
+				754C0FC42F94E36400DECA40 /* Sources */,
+				754C0FC52F94E36400DECA40 /* Frameworks */,
+				754C0FC62F94E36400DECA40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				754C0FC92F94E36400DECA40 /* MagicLSwitcherIM */,
+			);
+			name = MagicLSwitcherIM;
+			packageProductDependencies = (
+			);
+			productName = MagicLSwitcherIM;
+			productReference = 754C0FC82F94E36400DECA40 /* MagicLSwitcherIM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		75C52B342F729A6D00A7E8AF /* MagicLSwitcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75C52B562F729A6E00A7E8AF /* Build configuration list for PBXNativeTarget "MagicLSwitcher" */;
@@ -170,11 +236,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
-				LastUpgradeCheck = 2630;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
+					754C0FC72F94E36400DECA40 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
 					75C52B342F729A6D00A7E8AF = {
 						CreatedOnToolsVersion = 26.3;
+						LastSwiftMigration = 2640;
 					};
 					75C52B412F729A6E00A7E8AF = {
 						CreatedOnToolsVersion = 26.3;
@@ -203,11 +273,19 @@
 				75C52B342F729A6D00A7E8AF /* MagicLSwitcher */,
 				75C52B412F729A6E00A7E8AF /* MagicLSwitcherTests */,
 				75C52B4B2F729A6E00A7E8AF /* MagicLSwitcherUITests */,
+				754C0FC72F94E36400DECA40 /* MagicLSwitcherIM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		754C0FC62F94E36400DECA40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75C52B332F729A6D00A7E8AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +310,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		754C0FC42F94E36400DECA40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75C52B312F729A6D00A7E8AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +354,76 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		754C0FE92F94E36600DECA40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9FZXDM5KV5;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				"INFOPLIST_FILE[sdk=*]" = MagicLSwitcherIM/InfoIM.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KhachaturAbramian.MagicLSwitcherIM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		754C0FEA2F94E36600DECA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9FZXDM5KV5;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				"INFOPLIST_FILE[sdk=*]" = MagicLSwitcherIM/InfoIM.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KhachaturAbramian.MagicLSwitcherIM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		75C52B542F729A6E00A7E8AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -303,6 +458,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -322,12 +478,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -367,6 +525,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -380,11 +539,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -394,19 +555,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KhachaturAbramian.MagicLSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,6 +579,8 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MagicLSwitcher/Bridge/MagicLSwitcher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -425,19 +591,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KhachaturAbramian.MagicLSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,6 +615,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MagicLSwitcher/Bridge/MagicLSwitcher-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -457,6 +627,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
@@ -478,6 +649,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
@@ -498,6 +670,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -517,6 +690,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9FZXDM5KV5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -534,6 +708,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		754C0FEF2F94E36600DECA40 /* Build configuration list for PBXNativeTarget "MagicLSwitcherIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				754C0FE92F94E36600DECA40 /* Debug */,
+				754C0FEA2F94E36600DECA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		75C52B302F729A6D00A7E8AF /* Build configuration list for PBXProject "MagicLSwitcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

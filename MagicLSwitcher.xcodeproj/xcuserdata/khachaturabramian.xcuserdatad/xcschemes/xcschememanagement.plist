@@ -9,6 +9,34 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MagicLSwitcherIM.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>754C0FC72F94E36400DECA40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75C52B342F729A6D00A7E8AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75C52B412F729A6E00A7E8AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75C52B4B2F729A6E00A7E8AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

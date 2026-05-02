@@ -2,7 +2,14 @@ import Foundation
 
 
 final class TextBuffer {
-    var text: String = ""
+   private(set) var text: String = ""
+    var isEmpty: Bool {
+        text.isEmpty
+    }
+    var count: Int {
+        text.count
+    }
+    
     func add(_ char: Character) {
         text.append(char)
     }
@@ -10,9 +17,9 @@ final class TextBuffer {
         text = ""
     }
     func removeLast() {
-        if !text.isEmpty {
+        guard !text.isEmpty else { return }
             text.removeLast()
         }
     }
     
-}
+

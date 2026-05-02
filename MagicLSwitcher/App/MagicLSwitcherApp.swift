@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MagicLSwitcherApp: App {
+    let imkServerManager = IMKServerManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                 //   imkServerManager.start()
+                }
         }
     }
 }

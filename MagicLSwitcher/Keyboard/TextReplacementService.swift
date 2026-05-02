@@ -9,10 +9,10 @@ import ApplicationServices
 import Carbon
 
 final class TextReplacementService {
-    func deleteLastWord(length: Int) {
-        for _ in 0..<length {
-            let backspace = CGEvent(keyboardEventSource: nil, virtualKey: CGKeyCode(kVK_Delete), keyDown: true)
-            backspace?.post(tap: .cghidEventTap)
+    func deleteLastCharacter(count: Int) {
+        for _ in 0..<count {
+            let backspaceDown = CGEvent(keyboardEventSource: nil, virtualKey: CGKeyCode(kVK_Delete), keyDown: true)
+            backspaceDown?.post(tap: .cghidEventTap)
             let backspaceUp = CGEvent(keyboardEventSource: nil, virtualKey: CGKeyCode(kVK_Delete), keyDown: false)
             backspaceUp?.post(tap: .cghidEventTap)
         }
@@ -23,6 +23,7 @@ final class TextReplacementService {
             let event = CGEvent(keyboardEventSource: nil, virtualKey: 0, keyDown: true)
             event?.keyboardSetUnicodeString(stringLength: string.utf16.count, unicodeString: Array(string.utf16))
             event?.post(tap: .cghidEventTap)
+            
         }
     }
 }

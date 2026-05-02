@@ -4,8 +4,8 @@ import Carbon
 
 final class InputSourceManager {
     func currentInputLayoutID() -> String? {
-        let currentSource = TISCopyCurrentKeyboardInputSource()
-        guard let currentSource = currentSource else { return nil }
+         let currentSource = TISCopyCurrentKeyboardInputSource()
+         guard let currentSource = currentSource else { return nil }
         let inputSource = currentSource.takeUnretainedValue()
         let id = TISGetInputSourceProperty(inputSource, kTISPropertyInputSourceID)
         guard let id = id else { return nil }
@@ -14,7 +14,7 @@ final class InputSourceManager {
             .takeUnretainedValue() as String
         return layoutID
     }
-    func inputSource(for id: String) -> TISInputSource? {
+   private func inputSource(for id: String) -> TISInputSource? {
         let source = TISCreateInputSourceList(nil, false)
         guard let source = source else { return nil }
         let inputSource = source.takeUnretainedValue() as NSArray
